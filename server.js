@@ -3,6 +3,8 @@ const bodyParser = require('body-parser')
 
 const { engine } = require('express-handlebars')
 
+require('./model')
+
 const PORT = 8023 || process.env.PORT
 const app = express()
 
@@ -18,6 +20,21 @@ app.set('views', './views')
 
 // public routes for ui
 app.use('/', require('./routes/'))
+
+// api routes
+app.use('/api', require('./routes/apiRoutes'))
+
+app.use(function (req, res) {
+    res.status(404).send({ url: req.originalUrl + ' not found' })
+})
+
+// error handler
+app.use(function (err, req, res, next) {
+    return res.status(500).send({
+        error: true,
+        message: err
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`server is listening at ${PORT} PORT...`)
