@@ -28,37 +28,36 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12 form-group">
                                 <label for="firstName">First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name">
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name" required>
                             </div>
                             <div class="col-md-6 col-sm-12 form-group">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name">
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12 form-group">
                                 <label for="emailaddress">Email</label>
-                                <input type="email" class="form-control" id="emailaddress" placeholder="Enter Your Email Address">
+                                <input type="email" class="form-control" id="emailaddress" placeholder="Enter Your Email Address" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-md-12 form-group">
                                 <label for="country">Country</label>
-                                <select name="country" id="country" class="form-control">
-                                    <option value="">-----Select Country-----</option>
-                                    <option value="1"></option>
+                                <select name="country" id="country" class="form-control" required>
+                                    <option value="">-----Select-----</option>
                                 </select>
                             </div>
                             <div class="col-md-4 col-md-12 form-group">
                                 <label for="state">State</label>
-                                <select name="state" id="state" class="form-control">
-                                    <option value="">-----Select Sate-----</option>
+                                <select name="state" id="state" class="form-control" required>
+                                    <option value="">-----Select-----</option>
                                 </select>
                             </div>
                             <div class="col-md-4 col-md-12 form-group">
                                 <label for="city">City</label>
-                                <select name="city" id="city" class="form-control">
-                                    <option value="">-----Select City-----</option>
+                                <select name="city" id="city" class="form-control" required>
+                                    <option value="">-----Select-----</option>
                                 </select>
                             </div>
                         </div>
@@ -67,13 +66,13 @@
                                 <div class="form-check">
                                     <label for="gender">Gender</label>
 
-                                    <input type="radio" name="gender" class="form-check-input" id="male" value="1">
+                                    <input type="radio" name="gender" class="form-check-input" id="male" value="1" required checked="true">
                                     <label for="male" class="form-check-label">Male</label>
 
-                                    <input type="radio" name="gender" class="form-check-input" id="female" value="2">
+                                    <input type="radio" name="gender" class="form-check-input" id="female" value="2" required>
                                     <label for="female" class="form-check-label">Fe-Male</label>
 
-                                    <input type="radio" name="gender" class="form-check-input" id="other" value="3">
+                                    <input type="radio" name="gender" class="form-check-input" id="other" value="3" required>
                                     <label for="other" class="form-check-label">Other</label>
                                 </div>
                             </div>
@@ -81,7 +80,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12 form-group">
                                 <label for="dateOfBirth">Date of Birth</label>
-                                <input type="date" class="form-control" id="dateOfBirth">
+                                <input type="date" class="form-control" id="dateOfBirth" required>
                             </div>
                             <div class="col-md-6 col-sm-12 form-group">
                                 <label for="age">Age</label>
@@ -89,10 +88,20 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="d-grid gap-1">
                                     <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
                                 </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-grid gap-1">
+                                    <button type="button" id="reset" class="btn btn-danger btn-lg btn-block">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p id="notification"></p>
                             </div>
                         </div>
                     </form>
