@@ -8,7 +8,7 @@ const newDataValidation = data => {
         country: Joi.number().required(),
         state: Joi.number().required(),
         city: Joi.number().required(),
-        gender: Joi.number().required(),
+        gender: Joi.number().required().min(1).max(3),
         dob: Joi.date().required(),
         age: Joi.number().precision(2).required()
     })

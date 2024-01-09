@@ -19,7 +19,85 @@
     </head>
     <body>
         <div class='container mt-5'>
-            welcome
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2>User Registration Form</h2>
+                </div>
+                <div class="card-body">
+                    <form id="userFormData">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name">
+                            </div>
+                            <div class="col-md-6 col-sm-12 form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 form-group">
+                                <label for="emailaddress">Email</label>
+                                <input type="email" class="form-control" id="emailaddress" placeholder="Enter Your Email Address">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-md-12 form-group">
+                                <label for="country">Country</label>
+                                <select name="country" id="country" class="form-control">
+                                    <option value="">-----Select Country-----</option>
+                                    <option value="1"></option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-md-12 form-group">
+                                <label for="state">State</label>
+                                <select name="state" id="state" class="form-control">
+                                    <option value="">-----Select Sate-----</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-md-12 form-group">
+                                <label for="city">City</label>
+                                <select name="city" id="city" class="form-control">
+                                    <option value="">-----Select City-----</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <div class="form-check">
+                                    <label for="gender">Gender</label>
+
+                                    <input type="radio" name="gender" class="form-check-input" id="male" value="1">
+                                    <label for="male" class="form-check-label">Male</label>
+
+                                    <input type="radio" name="gender" class="form-check-input" id="female" value="2">
+                                    <label for="female" class="form-check-label">Fe-Male</label>
+
+                                    <input type="radio" name="gender" class="form-check-input" id="other" value="3">
+                                    <label for="other" class="form-check-label">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 form-group">
+                                <label for="dateOfBirth">Date of Birth</label>
+                                <input type="date" class="form-control" id="dateOfBirth">
+                            </div>
+                            <div class="col-md-6 col-sm-12 form-group">
+                                <label for="age">Age</label>
+                                <input type="text" class="form-control" id="presentAge" disabled value="0">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-grid gap-1">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!-- Bootstrap JS and Popper.js -->

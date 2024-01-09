@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
+app.use(express.static('public'))
+
 // settiing up the express handlebars engine
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
@@ -25,7 +27,7 @@ app.use('/', require('./routes/'))
 app.use('/api', require('./routes/apiRoutes'))
 
 app.use(function (req, res) {
-    res.status(404).send({ url: req.originalUrl + ' not found' })
+    res.status(404).send({ url: `No such ${req.originalUrl} url exist. Please try with correct one!!` })
 })
 
 // error handler
