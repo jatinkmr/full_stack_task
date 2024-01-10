@@ -1,118 +1,42 @@
 <html lang='en'>
-    <head>
-        <meta charset='UTF-8' />
-        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <title>Task</title>
 
-        <!-- Latest compiled and minified CSS -->
-        <link
-            rel='stylesheet'
-            href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' />
+<head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Task</title>
 
-        <!-- jQuery library -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' />
 
-        <!-- Latest compiled JavaScript -->
-        <script
-            src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
-    </head>
-    <body>
-        <div class='container mt-5'>
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h2>User Registration Form</h2>
-                </div>
-                <div class="card-body">
-                    <form id="userFormData">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12 form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name" required>
-                            </div>
-                            <div class="col-md-6 col-sm-12 form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 form-group">
-                                <label for="emailaddress">Email</label>
-                                <input type="email" class="form-control" id="emailaddress" placeholder="Enter Your Email Address" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 col-md-12 form-group">
-                                <label for="country">Country</label>
-                                <select name="country" id="country" class="form-control" required>
-                                    <option value="">-----Select-----</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-md-12 form-group">
-                                <label for="state">State</label>
-                                <select name="state" id="state" class="form-control" required>
-                                    <option value="">-----Select-----</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-md-12 form-group">
-                                <label for="city">City</label>
-                                <select name="city" id="city" class="form-control" required>
-                                    <option value="">-----Select-----</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <div class="form-check">
-                                    <label for="gender">Gender</label>
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-                                    <input type="radio" name="gender" class="form-check-input" id="male" value="1" required checked="true">
-                                    <label for="male" class="form-check-label">Male</label>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+</head>
 
-                                    <input type="radio" name="gender" class="form-check-input" id="female" value="2" required>
-                                    <label for="female" class="form-check-label">Fe-Male</label>
-
-                                    <input type="radio" name="gender" class="form-check-input" id="other" value="3" required>
-                                    <label for="other" class="form-check-label">Other</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12 form-group">
-                                <label for="dateOfBirth">Date of Birth</label>
-                                <input type="date" class="form-control" id="dateOfBirth" required>
-                            </div>
-                            <div class="col-md-6 col-sm-12 form-group">
-                                <label for="age">Age</label>
-                                <input type="text" class="form-control" id="presentAge" disabled value="0">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="d-grid gap-1">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-grid gap-1">
-                                    <button type="button" id="reset" class="btn btn-danger btn-lg btn-block">Reset</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p id="notification"></p>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+<body>
+    <div class='container'>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="/user-form" class="btn btn-primary">User Registration</a>
+                <a href="/user-data" class="btn btn-secondary">User Data</a>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Welcome</h2>
+                <p>Please click on the above navbar options to proceed</p>
+            </div>
+        </div>
+    </div>
 
-        <!-- Bootstrap JS and Popper.js -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="./script/customScript.js"></script>
-    </body>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script/customScript.js"></script>
+</body>
+
 </html>

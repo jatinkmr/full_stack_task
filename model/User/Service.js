@@ -19,7 +19,14 @@ const isUserEmailExist = async email => {
     }
 }
 
+const fetchUserData = async () => {
+    return await User.findAll({
+        raw: true
+    })
+}
+
 module.exports = {
     newUserCreation,
-    isUserEmailExist
+    isUserEmailExist,
+    fetchUserData
 }
