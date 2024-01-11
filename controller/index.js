@@ -23,9 +23,7 @@ const userFormController = async (req, res, next) => {
 const userDataController = async (req, res, next) => {
     try {
         let data = await fetchUserData()
-        console.log('data', data)
         let dataList = (data && data.length) ? data : []
-        console.log('dataList', dataList)
         res.render('userData', {
             layout: false,
             data: dataList
